@@ -1,8 +1,5 @@
 class profile::base(
-  $ntp_servers =[
-    '0.ubuntu.pool.ntp.org',
-    '1.ubuntu.pool.ntp.org',
-  ],
+  Array $ntp_servers,
 ) {
   class { '::ntp':
     ntp_servers => $ntp_servers
